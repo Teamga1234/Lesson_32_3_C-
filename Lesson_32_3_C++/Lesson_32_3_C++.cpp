@@ -14,4 +14,6 @@ int main()
 	int user = rand() % Lotery.size();
 	Lotery[user]->show();
 	cout << "Equvivalent: " << Lotery[user]->calcPrice();
+	cout << endl;
+	cout << typeid(*Lotery[user]).name() << endl;
 }
