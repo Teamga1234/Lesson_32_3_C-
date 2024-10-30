@@ -23,9 +23,24 @@ std::string fun::Toy::getMaterial() const
 
 void fun::Toy::show() const
 {
+    cout << "Toy: " << endl;
+    cout << "Name: " << name << "\nPrice: " << price << endl
+        << "Manufacture: " << manufacture << endl
+        << "Age: " << age << endl <<
+        "Material: " << material << endl << endl;
+
 }
 
 float fun::Toy::calcPrice() const
 {
-    return 0.0f;
+    float total = price;
+    if (material.find("nature") != -1) 
+    {
+        total *= 1.3;
+
+    }
+    if (age <= 3) {
+        total *= 1.1;
+    }
+    return total;
 }
