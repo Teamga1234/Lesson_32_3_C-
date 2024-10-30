@@ -1,22 +1,24 @@
 #pragma once
 #include "Product.h"
-
-namespace fun 
-{
-	class Toy : public products::Product
+namespace products{
+	namespace fun
 	{
-	protected:
-		std::string material;
-	public:
-		Toy();
-		Toy(std::string name, float price, std::string manufacture,
-			int age, std::string material);
+		class Toy : public products::Product
+		{
+		protected:
+			std::string material;
+		public:
+			Toy();
+			Toy(std::string name, float price, std::string manufacture,
+				int age, std::string material);
 
-		void setMaterial(std::string material);
-		std::string getMaterial()const;
-		void show()const override;
-		float calcPrice()const override;
-	};
+			void setMaterial(std::string material);
+			std::string getMaterial()const;
+			void show()const override;
+			float calcPrice()const override;
+		};
+	}
 }
+
 
 
