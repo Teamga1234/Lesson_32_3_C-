@@ -1,9 +1,11 @@
 ﻿#include "Toy.h"
 #include "SportEquipment.h"
 #include <vector>
+#include <ctime>
 
 int main()
 {
+	srand(time(0));
 	std::vector < products::Product*> Lotery;
 	Lotery.push_back(new products::fun::Toy("Ball", 100, "Chine",
 		34, "natural leather"));

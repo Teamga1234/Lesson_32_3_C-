@@ -34,7 +34,7 @@ void products::fun::Toy::show() const
 float products::fun::Toy::calcPrice() const
 {
     float total = price;
-    if (material.find("nature") != -1) 
+    if (material.find("natural") != -1) 
     {
         total *= 1.3;
 
